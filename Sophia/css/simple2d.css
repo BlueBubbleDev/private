@@ -1,0 +1,124 @@
+body {
+  margin: 0; font-family: system-ui, Arial, sans-serif;
+  background: #141414; color: #eee;
+  display: flex; flex-direction: column; align-items: center;
+  min-height: 100vh;
+}
+nav {
+  width: 100%; max-width: 900px; background: #222;
+  display: flex; justify-content: center; gap: 1.3rem;
+  padding: 0.8rem 0; box-shadow: 0 0 14px #ff3c7880;
+  font-weight: 600;
+}
+nav a {
+  color: #bbb; text-decoration: none; font-size: 1rem;
+  padding: 0.26rem 0.5rem; border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+nav a:hover, nav a:focus {
+  color: #ff6f91; background: #311634; outline: none;
+}
+nav a.active {
+  color: #ff6f91; font-weight: 700; text-decoration: underline;
+}
+
+header { text-align: center; margin-top: 1.6rem; }
+header h1 { color: #ff3c78; font-weight: 700; font-size: 2rem; margin-bottom: 0.2rem;}
+header p { color: #ff6f91; font-size: 1.1rem; margin: 0; }
+
+main {
+  display: flex; flex-direction: column; align-items: center;
+  width: 100%; max-width: 480px; padding: 0 1rem;
+}
+#scoreboard {
+  font-size: 1.22rem; color: #d30000;
+  font-weight: 600; margin: 1.1rem auto 0.45rem;
+}
+#scoreboard .heart {
+  font-size: 1.5rem; margin-left: 0.32rem;
+  animation: pulseHeart 1.5s ease infinite;
+}
+@keyframes pulseHeart {
+  0%,100% { transform: scale(1); color:#ff6f91; }
+  50% { transform: scale(1.18); color:#ff3c78; }
+}
+#simpleGame {
+  background: linear-gradient(180deg, #211533 0%, #2b1f3d 100%);
+  border: 3px solid #860000; border-radius: 16px;
+  box-shadow: 0 0 20px #ff0000;
+  width: 80%; 
+  aspect-ratio: 320 / 480; display: block;
+  touch-action: none;
+}
+
+#message {
+  min-height: 1.2em;
+  text-align: center;
+  color: #dfdfdf;
+  text-decoration: 3px underline rgb(146, 0, 0);
+  font-weight: 700;
+  margin: 1.1rem 0;
+}
+
+#startBtn {
+  padding: 0.68rem 2.1rem;
+  margin: 0.7rem auto 0 auto;
+  font-size: 1.08rem;
+  background: #b30000;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 10px #ff0000;
+  transition: background 0.2s;
+}
+#startBtn:hover, 
+#startBtn:focus {
+  background: #f70046;
+  outline: none;
+}
+
+#code-popup {
+  display: none;
+  position: fixed;
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 0 24px #ff6f91, 0 0 2px #ff8cac;
+  color: #fff;
+  max-width: 340px;
+  font-size: 1.12rem;
+  text-align: center;
+  z-index: 180;
+}
+
+/* nur zeigen beim Öffnen → mit block wie im ersten CSS */
+#code-popup.show {
+  display: block;
+}
+
+#code-popup .code-text {
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin: 1rem 0 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+#close-code-btn {
+  background: #ff3c78;
+  border: none;
+  padding: 0.64rem 1.18rem;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#close-code-btn:hover, 
+#close-code-btn:focus {
+  background: #ff8cac;
+}

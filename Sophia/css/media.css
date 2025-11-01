@@ -1,0 +1,32 @@
+/* media.css - Responsive Design */
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1.1rem;
+  }
+  #countdown {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+  nav {
+    gap: 1rem;
+    padding: 0.8rem 0;
+  }
+  nav a {
+    color: red;
+    text-decoration: underline;
+    font-weight: 1000;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* media.css */
+@media (max-width: 480px) {
+  #game-board {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+}

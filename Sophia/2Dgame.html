@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privat</title>
+  <link rel="stylesheet" href="css/2Dgame.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <link rel="stylesheet" href="css/memory-style.css" />
+
+</head>
+<body>
+
+<nav aria-label="Hauptnavigation">
+  <a href="2Dgame.html" class="active" aria-current="page">Herzenrausch</a>
+</nav>
+
+<header>
+  <h1>Herzensjagd</h1>
+  <p>Sammle alle Herzen, lass keins entwischen</p>
+</header>
+
+<main>
+  <section id="scoreboard">
+    Punkte: <span id="score">0</span> <span class="heart">❤️</span>
+  </section>
+  <canvas id="simpleGame" width="320" height="480" aria-label="Simple 2D-Spiel"></canvas>
+  <div id="message"></div>
+  <button id="startBtn" aria-label="Neustart">Neu starten</button>
+</main>
+
+<div id="code-popup" role="dialog" aria-modal="true">
+  <h2>Herzlichen Glückwunsch!</h2>
+  <p>Du hast Aufgabe 3/3 absolviert</p>
+  <div id="textToCopy">RBP747DDFX3Z49XA</div> 
+  <button id="copyButton">Kopieren</button>
+  
+</div>
+
+<script src="js/2Dgame.js"></script>
+<script>
+  document.getElementById('copyButton').addEventListener('click', function() {
+    const text = document.getElementById('textToCopy').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Text wurde in die Zwischenablage kopiert!');
+    }).catch(err => {
+      alert('Kopieren fehlgeschlagen: ' + err);
+    });
+  });
+</script>
+</body>
+</html>

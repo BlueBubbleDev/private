@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Privat</title>
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <link rel="stylesheet" href="css/simple2d.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/memory-style.css">
+</head>
+<body>
+
+<nav aria-label="Hauptnavigation">
+  <a href="simple2d.html" class="active" aria-current="page">Herzensjagd</a>
+</nav>
+<header>
+  <h1>Herzensjagd</h1>
+  <p>Sammle Herzen, weiche den Kreuzen aus</p>
+</header>
+
+<main>
+  <section id="scoreboard">
+    Punkte: <span id="score">0</span> <span class="heart">❤️</span>
+  </section>
+  <canvas id="simpleGame" width="320" height="480" aria-label="Simple 2D-Spiel"></canvas>
+  <div id="message"></div>
+  <button id="startBtn" aria-label="Neustart">Neu starten</button>
+</main>
+
+<div id="code-popup" role="dialog" aria-modal="true">
+  <h2>Herzlichen Glückwunsch!</h2>
+  <p>Du hast Aufgabe 2/3 absolviert</p>
+  <a href="2Dgame.html">
+  <button id="close-code-btn">Weiter</button>
+  </a>
+</div>
+
+<script src="js/simple2d.js"></script>
+</body>
+</html>

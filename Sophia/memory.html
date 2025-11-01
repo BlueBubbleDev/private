@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Memory - Für meine Liebste</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <link rel="stylesheet" href="css/memory-style.css" />
+</head>
+<body>
+
+<nav aria-label="Hauptnavigation">
+  <a href="memory.html" class="active" aria-current="page">Memory</a>
+  
+</nav>
+
+<header>
+  <h1>Memory</h1>
+  <p>Finde die passenden Paare und sammle Herzpunkte</p>
+</header>
+
+<main>
+  <section id="scoreboard">
+    Punkte: <span id="score">0</span> <span class="heart">❤️</span>
+  </section>
+  <section id="game-board"></section>
+</main>
+
+<div id="image-overlay">
+  <img src="" alt="Großansicht der Memory-Karte" />
+</div>
+
+<div id="code-popup" role="dialog" aria-modal="true">
+  <h2>Herzlichen Glückwunsch!</h2>
+  <p>Du hast Aufgabe 1/3 absolviert</p>
+  <a href="simple2d.html">
+  <button id="close-code-btn">Weiter</button>
+  </a>
+</div>
+
+<script src="js/memory.js"></script>
+</body>
+</html>
